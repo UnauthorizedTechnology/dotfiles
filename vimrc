@@ -3,8 +3,10 @@
 set relativenumber
 filetype plugin indent on
 syntax on
+set cursorline
+set showmatch
 
-"set modelines=10
+set modelines=10
 noremap  <Up> ""
 noremap! <Up> <Esc>
 noremap  <Down> ""
@@ -31,7 +33,7 @@ set showbreak=\ \ \ \
 set linebreak
 
 let mapleader=","
-set tw=76
+"set tw=76
 set encoding=utf-8
 setglobal fileencoding=utf-8
 set nobomb
@@ -71,13 +73,13 @@ inoremap jj <Esc>
 map N Nzz
 map n nzz
 map <s-tab> <c-w><c-w>
-colorscheme Tomorrow-Night
+colorscheme darkluma
 hi CursorLine term=none cterm=none ctermbg=none
 set t_Co=6
 "set foldmethod=indent
 "set foldminlines=5
 set nofoldenable        "dont fold by default
-"set foldlevel=1         "this is just what i use
+set foldlevel=1         "this is just what i use
 nnoremap <silent> <Space> @=(foldlevel('.')?'za':'l')<CR>
 vnoremap <Space> zf
 
@@ -98,6 +100,7 @@ let python_no_doctest_highlight = 1
 let python_no_exception_highlight = 1
 let python_no_number_highlight = 1
 let python_space_error_highlight = 1
+let python_highlight_all = 1
 
 let g:flake8_show_in_gutter=1  " show
 let vimplug_exists=expand('~/.vim/autoload/plug.vim')
@@ -121,8 +124,6 @@ if !filereadable(vimplug_exists)
 
 call plug#begin(expand('~/.vim/plugged'))
 
-
-
 "C Bundle
 Plug 'vim-scripts/c.vim', {'for': ['c', 'cpp']}
 Plug 'ludwig/split-manpage.vim'
@@ -134,8 +135,7 @@ Plug 'fatih/vim-go', {'do': ':GoInstallBinaries'}
 Plug 'jelera/vim-javascript-syntax'
 
 "Python Bundle
-Plug 'davidhalter/jedi-vim'
 Plug 'raimon49/requirements.txt.vim', {'for': 'requirements'}
+" Plugin 'vim-syntastic/syntastic'
 
 call plug#end()
-
