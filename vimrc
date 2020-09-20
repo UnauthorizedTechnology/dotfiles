@@ -3,7 +3,7 @@
 set relativenumber
 filetype plugin indent on
 syntax on
-set cursorline
+"set cursorline
 set showmatch
 
 set modelines=10
@@ -29,7 +29,7 @@ set backup
 set writebackup
 set undofile
 
-set showbreak=\ \ \ \ 
+set showbreak=\ \ \ \
 set linebreak
 
 let mapleader=","
@@ -73,7 +73,7 @@ inoremap jj <Esc>
 map N Nzz
 map n nzz
 map <s-tab> <c-w><c-w>
-colorscheme darkluma
+colorscheme dark-meadow
 hi CursorLine term=none cterm=none ctermbg=none
 set t_Co=6
 "set foldmethod=indent
@@ -117,7 +117,7 @@ if !filereadable(vimplug_exists)
                         echo ""
                           silent exec "!\curl -fLo " . vimplug_exists . " --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim"
                             let g:not_finish_vimplug = "yes"
-
+  
                               autocmd VimEnter * PlugInstall
                           endif
 
