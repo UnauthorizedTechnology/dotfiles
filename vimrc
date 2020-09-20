@@ -6,6 +6,11 @@ syntax on
 "set cursorline
 set showmatch
 
+
+" osx fix for italic control codes
+let &t_ZH="\e[3m"
+let &t_ZR="\e[23m"
+
 set modelines=10
 noremap  <Up> ""
 noremap! <Up> <Esc>

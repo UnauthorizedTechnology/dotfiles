@@ -1,4 +1,4 @@
-" Name:         dark-meadow 
+" Name:         dark-meadow
 " Author:       jliu2179/cliuj
 " Maintainer:   jliu2179/cliuj
 " License:      MIT
@@ -28,7 +28,7 @@ let s:Grey11          =  ['232',  '#1c1c1c']
 let s:Grey42          =  ['235',  '#262626']
 let s:Grey54          =  ['245',  '#8a8a8a']
 
-" Text style 
+" Text style
 let s:italic      =   'italic'
 let s:bold        =   'bold'
 let s:underline   =   'underline'
@@ -50,9 +50,9 @@ endfunction
 " For reference on what each group does, please refer to this:
 " vimdoc.sourceforge.net/htmldoc/syntax.html
 "
-call s:highlight('Comment',         s:DeepSkyBlue3,     s:clear,    s:none)
+call s:highlight('Comment',         s:DeepSkyBlue3,     s:clear,    s:italic)
 call s:highlight('Constant',        s:DeepSkyBlue3,     s:clear,    s:none)
-call s:highlight('String',          s:Teal,             s:clear,    s:none)
+call s:highlight('String',          s:Teal,             s:clear,    s:italic)
 call s:highlight('Character',       s:SpringGreen3,     s:clear,    s:none)
 call s:highlight('Number',          s:SkyBlue1,         s:clear,    s:none)
 call s:highlight('Boolean',         s:SpringGreen3,     s:clear,    s:bold)
