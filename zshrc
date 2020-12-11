@@ -49,7 +49,7 @@ DISABLE_AUTO_UPDATE="true"
 # ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
-# COMPLETION_WAITING_DOTS="true"
+ COMPLETION_WAITING_DOTS="true"
 
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
@@ -100,6 +100,7 @@ export EDITOR='vim'
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
 export PATH="/usr/local/opt/sqlite/bin:$PATH"
 
 export NVM_DIR="$HOME/.nvm"
@@ -110,3 +111,7 @@ fi
 if [[ -s "$NVM_DIR/bash_completion" ]]; then
     source "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 fi
+PATH=$(pyenv root)/shims:$PATH
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"

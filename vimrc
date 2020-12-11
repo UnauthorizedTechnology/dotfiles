@@ -1,4 +1,4 @@
-"howhowexecute pathogen#infect()
+execute pathogen#infect()
 
 set relativenumber
 filetype plugin indent on
@@ -122,16 +122,12 @@ if !filereadable(vimplug_exists)
                         echo ""
                           silent exec "!\curl -fLo " . vimplug_exists . " --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim"
                             let g:not_finish_vimplug = "yes"
-  
+
                               autocmd VimEnter * PlugInstall
                           endif
 
 
 call plug#begin(expand('~/.vim/plugged'))
-
-"C Bundle
-Plug 'vim-scripts/c.vim', {'for': ['c', 'cpp']}
-Plug 'ludwig/split-manpage.vim'
 
 "Go Lang Bundle
 Plug 'fatih/vim-go', {'do': ':GoInstallBinaries'}
@@ -141,6 +137,17 @@ Plug 'jelera/vim-javascript-syntax'
 
 "Python Bundle
 Plug 'raimon49/requirements.txt.vim', {'for': 'requirements'}
-" Plugin 'vim-syntastic/syntastic'
 
 call plug#end()
+
+"Syntastic Settings
+
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
