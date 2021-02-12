@@ -5,6 +5,10 @@
 export ZSH="/Users/kat/.oh-my-zsh"
 ZSH_DISABLE_COMPFIX="true"
 
+# Path to Java to fix bug sur bug
+
+export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk-15.0.2.jdk/Contents/Home"
+
 #Turns off homebrew analytics
 export HOMEBREW_NO_ANALYTICS=1
 
