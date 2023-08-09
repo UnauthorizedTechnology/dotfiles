@@ -1,5 +1,3 @@
-execute pathogen#infect()
-
 set relativenumber
 filetype plugin indent on
 syntax on
@@ -140,14 +138,4 @@ Plug 'raimon49/requirements.txt.vim', {'for': 'requirements'}
 
 call plug#end()
 
-"Syntastic Settings
-
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
 
