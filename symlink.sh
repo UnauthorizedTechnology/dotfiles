@@ -5,7 +5,6 @@
 
 rm -f ~/.vimrc
 ln -s ~/.dotfiles/vimrc  ~/.vimrc
-
 echo .vimrc has been symlinked.
 
 rm -f ~/.slate.js
@@ -15,6 +14,12 @@ echo .slate.js has been symlinked.
 rm -f ~/.zshrc
 ln -s ~/.dotfiles/zshrc ~/.zshrc
 echo .zshrc has been symlinked.
+
+rm -f ~/backup-to-HDD.sh
+ln -s ~/.dotfiles/backup-to-HDD.sh ~/backup-to-HDD.sh
+echo backup-to-HDD.sh has been symlinked.
+
+
 
 if [[ ! -d ~/.vim/colors ]]; then
     mkdir -p ~/.vim/colors
